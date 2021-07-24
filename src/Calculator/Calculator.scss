@@ -1,0 +1,33 @@
+.Calculator {
+  margin: 0 auto;
+  max-width: 576px;
+  padding: 10px 15px 0;
+
+  &-FormRow {
+    margin-bottom: 18px;
+  }
+
+  &-Text {
+    font-size: 48px;
+  }
+
+  &-Label {
+    display: block;
+    margin-bottom: 5px;
+
+    font-size: 24px;
+  }
+
+  &-Result {
+    text-align: center;
+  }
+
+  &-ResultCaption {
+    font-size: 24px;
+  }
+}
+
+.Input {
+  width: 100%;
+  box-sizing: border-box;
+}

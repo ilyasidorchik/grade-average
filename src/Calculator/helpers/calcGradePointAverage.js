@@ -24,6 +24,7 @@ export const calcGradePointAverage = (a, b) => {
   // eslint-disable-next-line no-eval
   const partDownAnswer = eval(partDown.eval({ y: 1 }).toString());
   const result = (partUpAnswer / partDownAnswer).toFixed(2);
+  const resultForRussia = result.replace(".", ",");
 
-  return result;
+  return resultForRussia;
 };

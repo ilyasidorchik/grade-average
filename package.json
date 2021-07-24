@@ -36,5 +36,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@bem-react/classname": "1.5.11",
+    "sass": "1.36.0"
   }
 }
