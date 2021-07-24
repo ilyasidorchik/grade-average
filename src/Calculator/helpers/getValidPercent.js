@@ -1,8 +1,10 @@
 export const getValidPercent = (value = "") => {
-  const isValueValid = value
-  if (!isValueValid) return 0;
+  if (!value) return "0";
 
-  let safeValue = value.replace(/,/g, ".");;
+  const withManySeparators = (value.match(/[.,]/g) || []).length > 1;
+  let safeValue = withManySeparators ? value.replace(/[.,]/g, "") : value;
+
+  safeValue = safeValue.replace(/[^.,\d]+/g, "").replace(/,/g, ".");
   const lastChar = safeValue[safeValue.length - 1];
   const isValueUnfinished = lastChar === ".";
 
@@ -10,5 +12,5 @@ export const getValidPercent = (value = "") => {
     safeValue = `${safeValue}0`;
   }
 
-  return value ? safeValue : 0;
+  return value ? safeValue : "0";
 };
