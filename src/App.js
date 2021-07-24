@@ -1,5 +1,3 @@
-import "./App.css";
-
 import Calc from "./Calc/Calc";
 
 function App() {
